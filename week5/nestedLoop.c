@@ -2,7 +2,12 @@
 int main(void){
     char spaceSign='*';
     char seatSign='X';
-    for(int R=1;R<=7;R++)
+    int horizontal;
+    int vertical;
+    puts("please enter your seat number(x,y)");
+    scanf("%d",&horizontal);
+    scanf("%d",&vertical);
+    for(int R=1;R<=10;R++)
     {
         if(R==1){
             printf("  ");
@@ -12,9 +17,9 @@ int main(void){
         printf("%2dR",r);
     }
     printf("\n");
-    for(int i=1;i<=4;i++){
-        for(int j=1;j<=7;j++){
-            if(i==3 && j==5){
+    for(int i=1;i<=10;i++){
+        for(int j=1;j<=10;j++){
+            if(i==vertical && j==horizontal+1){
                 printf("%3c",seatSign);
             }
             else if(j==1){
